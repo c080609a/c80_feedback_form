@@ -1,0 +1,10 @@
+var $cc = $("#ff");
+var html_str = "<%= j render_feedback_form %>";
+
+setTimeout(function () {
+    $('#loading').addClass('invis');
+    setTimeout(function () {
+        $cc.html(html_str);
+    },500);
+},1000);
+
