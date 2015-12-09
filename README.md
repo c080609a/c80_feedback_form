@@ -1,8 +1,6 @@
 # C80FeedbackForm
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/c80_feedback_form`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Gem adds functionality to allow users to send feedback messages from site.
 
 ## Installation
 
@@ -22,7 +20,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You will need to add this line into your `application.js`:
+
+    //= require c80_feedback_form
+
+And add this line into `application.scss`:
+
+    @import "c80_feedback_form";
+
+Add this line into `active_admin.scss`:
+
+    @import "active_admin_c80_feedback_form";
+
+Add this line into `routes.rb`:
+
+    mount C80FeedbackForm::Engine => '/'
+
+Gem functionality applies to code snippets like this:
+
+    <body id="contacts"> <!-- js script performs at body#contacts page only -->
+       <...>
+       <div id="ff"></div> <!-- feedback form placeholder -->
+       <...>
+    </body>
 
 ## Development
 

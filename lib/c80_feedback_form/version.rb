@@ -1,3 +1,3 @@
 module C80FeedbackForm
-  VERSION = "0.1.27"
+  VERSION = "0.1.0"
 end
