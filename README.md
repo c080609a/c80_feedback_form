@@ -1,3 +1,6 @@
+[![Gem Version](https://badge.fury.io/rb/c80_feedback_form.svg)](http://badge.fury.io/rb/jquery_lazy_load)
+[![Build Status](https://travis-ci.org/c080609a/c80_feedback_form.svg?branch=master)](https://travis-ci.org/c080609a/c80_feedback_form)
+
 # C80FeedbackForm
 
 Gem adds functionality to allow users to send feedback messages from site.

@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["C80609A"]
   spec.email         = ["c080609a@gmail.com"]
 
-  spec.summary       = 'Gem adds functionality to allow users to send feedback messages from site.'
+  spec.summary       = 'Enable the feedback feature'
+  spec.description   = 'Gem adds functionality to allow users to send feedback messages from site.'
   spec.homepage      = "https://github.com/c080609a/c80_feedback_form"
   spec.license       = "MIT"
 
