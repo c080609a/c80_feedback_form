@@ -23,8 +23,19 @@ Or install it yourself as:
 
 ## Usage
 
+NOTE: This gem uses `activeadmin` gem, `jQuery` gem, `bootstrap-sass` gem and `c80_modal_forms` gem.
+
+Ensure, that your application's `Gemfile` contains these lines:
+```ruby
+gem 'activeadmin'
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'c80_modal_forms'
+```
+
 You will need to add this line into your `application.js`:
 
+    //= require c80_modals_form
     //= require c80_feedback_form
 
 And add this line into `application.scss`:
