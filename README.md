@@ -27,14 +27,21 @@ NOTE: This gem uses `activeadmin` gem, `jQuery` gem, `bootstrap-sass` gem and `c
 
 Ensure, that your application's `Gemfile` contains these lines:
 ```ruby
+# active admin
 gem 'activeadmin'
+gem 'devise'
+gem 'cancan' # or cancancan
+gem 'draper'
+gem 'pundit'
+
 gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'c80_modal_forms'
 ```
 
-You will need to add this line into your `application.js`:
+You will need to add these lines into your `application.js`:
 
+    //= require bootstrap/modal
     //= require c80_modals_form
     //= require c80_feedback_form
 
