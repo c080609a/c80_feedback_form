@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/c80_feedback_form.svg)](http://badge.fury.io/rb/jquery_lazy_load)
+[![Gem Version](https://badge.fury.io/rb/c80_feedback_form.svg)](http://badge.fury.io/rb/c80_feedback_form)
 [![Build Status](https://travis-ci.org/c080609a/c80_feedback_form.svg?branch=master)](https://travis-ci.org/c080609a/c80_feedback_form)
 
 # C80FeedbackForm
@@ -42,11 +42,13 @@ gem 'c80_modal_forms'
 You will need to add these lines into your `application.js`:
 
     //= require bootstrap/modal
-    //= require c80_modals_form
+    //= require c80_modal_form
     //= require c80_feedback_form
 
 And add this line into `application.scss`:
 
+    @import "bootstrap-sprockets";
+    @import "bootstrap";
     @import "c80_feedback_form";
 
 Add this line into `active_admin.scss`:
