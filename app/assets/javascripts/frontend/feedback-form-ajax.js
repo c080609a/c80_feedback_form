@@ -10,9 +10,10 @@ var fFeedbackFormOnScroll;
 // =[ implementation ]=====================================================================================================================
 
 $(function () {
-    if ($("body#contacts").length == 1) {
 
-        $formHolder = $("div#ff");
+    $formHolder = $("div#ff");
+
+    if ($("body#contacts").length == 1 || $formHolder.length == 1) {
 
         fFeedbackFormInvalidate = function () {
             if (!markInvalidateInProgress) {
