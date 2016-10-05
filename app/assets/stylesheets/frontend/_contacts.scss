@@ -4,6 +4,7 @@
   background-color: rgba(51, 122, 183, .03);
   min-height: 300px;
   position: relative;
+  * { &:focus { outline: none !important; } }
 
   #loading {
     position: absolute;
@@ -25,7 +26,8 @@
 
   }
 
-  #feedback_form {
+  div#feedback_form { /* NOTE:: получается, на странице может быть только одна такая форма */
+
     .modal-dialog {
       width: auto;
       margin: 0 0 0 -15px;
@@ -33,6 +35,116 @@
       .modal-content {
         box-shadow: none;
         border: none;
+
+        div.modal-header {
+
+        }
+
+        div.modal-body {
+
+          div.form-group {
+
+            label {
+
+            }
+
+            .input_wrapper {
+
+              position: relative;
+
+              &:after {
+                content: "";
+                background: transparent url(image_path('stripe.png')) repeat 0 0; /*NOTE:: можно переопределить в custom классах */
+                opacity: 0.1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: 0;
+              }
+
+              .form-control {
+                position: relative;
+                z-index: 1;
+
+                /*transition: border-color ease-in-out 0.55s,
+                box-shadow ease-in-out 0.55s,
+                color ease-out 0.35s,
+                background-color ease-in-out 0.55s;
+                -webkit-transition: border-color ease-in-out 0.55s,
+                box-shadow ease-in-out 0.55s,
+                color ease-out 0.35s,
+                background-color ease-in-out 0.55s;*/
+
+                &:focus {
+                  /*background-color: rgba(255,255,255,0.13);
+                  color: #4dffff;
+                  text-shadow: 0 0 7px rgba(0, 108, 255, 0.63);
+                  border: #ffc702 1px solid;
+                  font-weight: 100 !important;
+                  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 15px rgba(102, 223, 233, 0.7);
+                  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 15px rgba(102, 223, 233, 0.7);*/
+                }
+
+              }
+
+            }
+
+            textarea {
+
+            }
+
+            .help-block {
+
+            }
+
+            &.has_error {
+
+              .help-block {
+                /*color: #ff7f7c;*/
+              }
+
+            }
+
+          }
+
+          div.actions {
+
+            input.btn {
+              margin: 0 auto;
+              display: block;
+              font-size: 18px;
+              width: 400px;
+              height: 60px;
+              text-transform: uppercase;
+              border-width: 0;
+              /*border-radius: 0;*/
+              /*@include frankRegular(15px);*/
+
+              box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16), 0 2px 2px rgba(0, 0, 0, 0.23);
+              background-image: linear-gradient(to right, #5bb7c9, #468b99);
+              background: -webkit-gradient(linear, left top, right top, from(#5bb7c9), to(#468b99));
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bb7c9', endColorstr='#468b99', GradientType=1);
+
+              -webkit-transition: all .4s ease-out;
+              -moz-transition: all .4s ease-out;
+              -ms-transition: all .4s ease-out;
+              -o-transition: all .4s ease-out;
+              transition: all .4s ease-out;
+
+              &:focus, &:hover {
+                background-image: linear-gradient(to right, #69d3e8, #468b99);
+                background: -webkit-gradient(linear, left top, right top, from(#69d3e8), to(#468b99));
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#69d3e8', endColorstr='#468b99', GradientType=1);
+              }
+
+            }
+
+          }
+
+        }
+
       }
 
     }
@@ -40,5 +152,7 @@
 
 }
 
-.kapcha { display: none; }
+.kapcha {
+  display: none;
+}
 
